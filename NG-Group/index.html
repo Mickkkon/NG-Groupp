@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+
+	<title>NG Group</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+
+	<!-- google fonts  
+  font-family: 'Open Sans', sans-serif;  -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+
+<!-- google icons  -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+	<link rel="stylesheet" href="./assets/css/main.css" />
+
+	<style>
+		
+		.tech-wrapper {
+			height:50vh;
+			width: 0.8%;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			 border-radius: 10px;
+			 border-left: 1px solid #ffffff ;
+			overflow: hidden;
+			transition: 1s ease all;
+			
+		}
+
+		.tech-wrapper::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: rgb(0, 0, 0, .8);
+
+		}
+		.tech-wrapper:hover {
+			width: 85%;
+			 box-shadow: 5px 5px 5px white;
+			border: 1px solid white;
+
+		}
+
+		.tech-wrapper1 {
+        position: relative;
+        width: 100%;
+       height: 100%;
+        overflow: hidden;
+    }
+
+	/* scroll level indincator */
+	.scroll-indicator {
+
+    width: 0;
+    height: 4px; /* Adjust the height as needed */
+    background-color:rgb(23, 216, 152); /* Indicator color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: width 0.2s;
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width as needed */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track background color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar handle color */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Scrollbar handle color on hover */
+}
+
+ /* ACCORDION START */
+
+ /* accordion animation style  */
+ /* Initial (collapsed) state */
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height;
+}
+
+/* Final (expanded) state */
+.accordion-content.active {
+    max-height: 600px; /* Adjust the value based on your content height */
+}
+
+ /* end of animation  ************************************************    */ 
+
+.accordion-item {
+    position: relative;
+    width: 100%;
+}
+
+.accordion-content {
+    display: none;
+    padding: 16px;
+    background-color: #d5def0;
+    /* Additional styling for content when expanded */
+}
+
+/* Styling for active (expanded) accordion item */
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+.accordion-item.active .accordion-content p {
+ 
+  color: rgb(40, 40, 40);
+  /* height: 80px; */
+  width: 80%;
+  
+  margin:auto;
+  margin-top: 10px;
+ 
+  border-radius: 10px;
+  border: 1px solid #2d98da;
+  text-align: center;
+  padding: 5px 10px;
+  
+}
+
+/* styles for the intro section  */
+ 
+
+
+	</style>
+
+</head>
+
+	<div  class="scroll-indicator" id="scroll-indicator"></div>
+
+	<header>
+		
+		<div class="container">
+			
+			<nav>
+				<a id="home-anchor" href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+				<a href="#specialties">Specialties</a>
+				<a href="#our-story">Our-Story</a>
+				<!-- <a href="#">Our-Passions</a> -->
+				<a href="#">Reports</a>
+ 
+				<a href="#contact">Contact</a>
+			</nav>
+
+			<button class="hamburger">
+				<div class="bar">
+
+				</div>
+			</button>
+		</div>
+	</header>
+
+
+<!-- mobile nav -->
+
+	<nav class="mobile-nav">
+		<a href="#" class="mobile-nav-link outer-links"><i class="fa fa-home"     aria-hidden="true"></i> Home</a>
+		<div class="accordion-item">
+			<a class="outer-links" href="#specialties">Specialties</a>
+			<div class="accordion-content">
+				<!-- Content for Services -->
+				<p class="mobile-nav-link">What we do</p>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<a class="outer-links" href="#our-story">Our-Story</a>
+			<div class="accordion-content">
+				
+				<a href="#global-footprint">
+					<p style="padding: 10px; position: relative;" class="mobile-nav-link">
+						
+						More on Us
+					</p>
+				</a>
+
+			</div>
+		</div>
+		<div class="accordion-item">
+			<a class="outer-links" href="#contact">Contact</a>
+			<div class="accordion-content" style="">
+				<a href="tel:+254729151110"> 
+					<p style="padding: 10px; position: relative;" class="mobile-nav-link">
+						<span class="material-symbols-outlined" style="
+							border: none;
+							position: absolute;
+							top: 20%;
+							left: 20%;
+						">phone_in_talk</span>
+						Call Us?
+					</p>
+				</a>
+				
+
+				<a href="mailto:global@nggruppo.com">
+					<p style="padding: 10px; position: relative;" class="mobile-nav-link">
+						<span class="material-symbols-outlined" style="
+							border: none;
+							position: absolute;
+							top: 20%;
+							left: 20%;
+						">mail</span>
+						Mail Us
+					</p>
+				</a>
+
+				<a href="#contact">
+					<p style="padding: 10px; position: relative;" class="mobile-nav-link">
+					 Our email
+					</p>
+				</a>
+				
+				
+			</div>
+		</div>
+	</nav>
+
+	<!-- Start of Main  -->
+	<main>
+	<section>
+	
+		<section class="banner">
+			<div class="container">
+				<h1>
+
+					 
+					Experience: 
+					<span>NG Group</span>
+				</h1>
+		
+				<h3>We provide global solutions in technology, engineering, and science.</h3>
+				 <h2 class="banner-h2">Pioneering Solutions, Transforming the Planet<p></p></h2>
+				 
+			</div>
+		
+			
+		</section>
+		
+
+
+				
+<!-- Intro section -->
+
+<section class="intro-sect" id="global-footprint" >
+
+	<div class="card card1">
+
+		<div class="content">
+			
+			<h3>
+				<span class="material-symbols-outlined animated-element">
+					language
+				   </span>
+				
+				Our Global Footprint
+				
+			
+			</h3>
+
+		
+		</div>
+		
+
+	</div>
+
+	<div id="our-story" class="card card2">
+
+		<div class="content">
+			
+
+			<p id="p1">
+				At NG Group, our journey began in the city of Perth, Western Australia. From Perth, we've ventured across - <span id="p-segment">continents and soared to new heights, building a legacy of innovation and excellence. Our story is one of exploration, collaboration, and transformation.</span>
+			</p>
+
+			<p>
+
+				Our influence goes beyond, with interests spanning across diverse regions Australia, New Zealand, the bustling streets of Europe, and the rich history of the United Kingdom. 
+				<span>Our reach extends even further, embracing the dynamic markets of America, the untamed spirit of Africa, and the Middle East.</span>
+ 
+			</p>
+		
+		</div>
+
+	</div>
+
+</section>
+
+
+<section class="divider">
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+	<div id="div5"></div>
+	<div id="div6"></div>
+	<div id="div7"></div>
+	<div id="div8"></div>
+	<div id="div9"></div>
+	<div id="div10"></div>
+	<div id="div11"></div>
+	<div id="div12"></div>
+	<div id="div13"></div>
+	<div id="div14"></div>
+	<div id="div15"></div>
+	<div id="div16"></div>
+	<div id="div17"></div>
+	<div id="div18"></div>
+	<div id="div19"></div>
+	<div id="div20"></div>
+	<div id="div21"></div>
+	<div id="div22"></div>
+	<div  id="div23"></div>
+</section>
+
+
+<!-- section membership heading  -->
+<div class="membership-wrapper">
+	<div class="div1">
+		<div class="div2">
+			<div class="div3">
+				<h2>Membership</h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Membership Section -->
+
+ 
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+		  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+
+		  <div class="carousel-item active">
+			<div class="company-card">
+			  
+			  <img src="assets/images/pimage6.jpg" alt="Company 1 Logo" style="display:block;">
+
+				<div class="text-content">
+					<h3 id="holdings-id"> GROUP HOLDINGS LLC</h3>
+					<p style="text-align: justify;">We deliver science, technology and engineering solutions to governments,orgernizations, companies and individuals across the globe</p> 
+					<a href="#">Explore<span class="material-symbols-outlined">arrow_forward</span>
+						</a>
+				  </div>
+			 
+		  </div>
+
+
+		</div>
+  
+		  <div class="carousel-item">
+			<div class="company-card">
+			  
+				
+			  <img src="assets/images/pimage4.jpg" alt="Company 1 Logo">
+			  <div class="text-content">
+				<h3 id="modern-id"><span>M</span>ODERN HAVEN INTERIORS</h3>
+				<p style="
+					text-align: justify;
+
+				;">An award winning architectural practitioner dedicated to producing innovative, perspective designs in our rapidly evolving and expanding culture</p> 
+				<a href="#">Explore<span class="material-symbols-outlined">arrow_forward</span></a>
+			  </div>
+			
+		  </div>
+		  </div>
+
+
+		  <div class="carousel-item">
+
+			<div class="company-card">
+			  
+			  <img src="assets/images/pimage3.jpg" alt="Company 1 Logo">
+
+			  <div class="text-content">
+				<h3 id="empire-id">NG-EMPIRE HOLDINGS</h3>
+				<p style="text-align: justify;">Delivering solutions, changing our world</p> 
+				<h6 style="font-size: 22px; visibility: hidden;">innovative, perspective designs in our rapidly evolving and culture expanding culture</h6>
+				<a href="#">Explore<span class="material-symbols-outlined">arrow_forward</span></a>
+			  </div>
+		  </div>
+		  </div>
+		  
+		  <div class="carousel-item">
+			<div class="company-card">
+			  
+			  <img src="assets/images/theone1.jpg" alt="Company 1 Logo" >
+
+			  <div class="text-content">
+				<h3 id="caldev-id"><span>C</span>ALDEV INTERNATIONAL</h3>
+				<p style="text-align: justify;">Caldev Group is a global  consulting firm that partners with leaders in businesses & society to solve emerging challenges</p> 
+				<a href="#">Explore<span class="material-symbols-outlined">arrow_forward</span></a>
+			  </div>
+		  </div>
+			
+		  </div>
+  
+		</div>
+		
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+		</div>
+	  </div>
+
+</div>
+ 
+			 
+<!-- SUB INDUSTRIES SECTION -->
+
+<section id="specialties" class="sub-industries">
+	<div class="title" style="margin-top: 10px;">
+		<h1>Our-Passions</h1>
+	</div>
+
+	<div class="sub-card card1">
+		<div class="left-div left-div1">
+			<h3>Governments & Civilian</h3>
+		</div>
+		<section  class="card1-content">
+			<p>Serving Governments and Communities</p>
+					<p class="para2">From Governmental projects to local initiatives, we're dedicated to shaping societies and enhancing lives.</p>
+		</section>
+	</div>
+
+	<div class="sub-card card1">
+		<div class="left-div left-div2">
+			<h3>Industrial Solutions</h3>
+		</div>
+		<section  class="card1-content">
+			<p>Building the Foundations of Industry</p>
+					<p class="para2">Our industrial ventures form the bedrock of progress, driving economies forward</p>
+		</section>
+	</div>
+	<div class="sub-card card1">
+		<div class="left-div left-div3">
+			<h3>Aero-space & Defense</h3>
+		</div>
+		<section  class="card1-content">
+			<p>Guardians of the Skies</p>
+					<p class="para2">In the realm of aerospace and defense, we reach for the stars and safeguard nations</p>
+
+				</div>
+		</section>
+
+	<section class="hearts">
+			<div class="wrapper">
+				<h4>
+					We've not only ventured into these regions and industries but also into the hearts of people worldwide. Our commitment to innovation, sustainability, and social responsibility continues to guide us as we leave our mark on every corner of the globe. 
+					<span id="hearts">
+
+						Join us on this remarkable journey, where borders are bridges, and possibilities are limitless.
+					</span>
+					
+				</h4>
+				
+			</div>
+	</section>
+	
+ 
+<!-- 
+	<div class="global-conclusion" style="border: 2px solid yellow">
+		<p>
+			As NG Group, we've not only ventured into these regions and industries but also into the hearts of people worldwide. Our commitment to innovation, sustainability, and social responsibility continues to guide us as we leave our mark on every corner of the globe. Join us on this remarkable journey, where borders are bridges, and possibilities are limitless.
+		</p>
+	</div>
+	<div class="call-to-action">
+	
+		<a href="#" class="cta-button">Explore our global impact</a>
+	</div>   -->
+
+
+
+	<!-- WORK WITH US SECTION -->
+
+	<!-- <section class="work">
+
+		<h3>Working at NG Group</h3>
+		
+	</section> -->
+
+	<section class="working-section">
+        <div class="container">
+            <h2>Join NG Group</h2>
+            <p>We're always looking for talented individuals to join our team and make a difference.</p>
+
+            <div class="company-overview">
+                <div class="growth">
+					<div class="content">
+						<h3>Growth Opportunities</h3>
+						<p>Providing avenues for employees to develop their skills and advance their careers nurtures a culture of personal and professional progress</p>
+					</div>
+                    
+                </div>
+
+                <div class="company-values">
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li>We Value Our People
+
+							Open Communication: Encouraging open and transparent communication channels where employees can share their ideas, concerns, and feedback without fear of reprisal fosters a culture of trust and respect.
+						</li>
+                        <li>We Deliver</li>
+                        <li>We Are People of Integrity</li>
+                        <li>We Empower</li>
+                        <li>We Are a Team of Teams</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-info" id="contact-sect">
+			
+				<img src="assets/images/workersss.jpg" alt="">
+				<div class="content">
+					<h3>Contact Us</h3>
+					<p>Email: global@nggruppo.com</p>
+					<p>Contact: +61415813541 | +254 729 151 110</p>
+				</div>
+                
+            </div>
+        </div>
+    </section>
+
+<!-- Footer  -->
+
+			<footer class="footer">
+				<div class="container">
+				  <div class="footer-content">
+
+					<div class="news">
+						<h3>Join Our Newsletter
+
+							Stay Updated with latest news & Updates from NG Group
+						</h3>
+						<form action="">
+							<input type="email" name="email" placeholder="email address">
+							<input type="submit" name="submit">
+						</form>
+					</div>
+					<div id="contact" class="footer-section contact">
+					  <h3>Contact Us</h3>
+					  <p>Email: global@nggruppo.com</p>
+					  <p>Phone: +61415813541 | +254729151110 </p>
+					  <p>Address: 123 Forex Street, City, Country</p>
+					</div>
+					<div class="footer-section links">
+					  <h3>Quick Links</h3>
+					  <ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Classes</a></li>
+						<li><a href="#">Contact</a></li>
+					  </ul>
+					</div>
+					<div class="footer-section social">
+					  <h3>Connect with Us</h3>
+					  <ul>
+						<li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+						
+						<li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+
+
+						<li><a href="#"><i class="fab fa-skype"></i> Skype</a></li>
+
+						<li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+						
+						<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+					  </ul>
+					</div>
+
+					
+				  </div>
+				  <p>&copy; <span id="copyrightYear"></span> NG Group. All rights reserved.</p>
+				  
+				</div>
+
+				
+
+			  </footer>
+
+			  <button id="back-to-top" title="Go to top">&#9650;</button>
+			  
+
+			</main>
+
+<script>
+	 // Initialize the carousel
+				// $(document).ready(function() {
+				// 	$('#carouselExampleIndicators').carousel();
+					
+				// });
+				</script>
+				
+	 
+			  <script src="./assets/js/main.js"></script>
+			  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ 
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            var scrollPos = $(document).scrollTop();
+            var windowHeight = $(window).height();
+            var documentHeight = $(document).height();
+
+            var scrollPercentage = (scrollPos / (documentHeight - windowHeight)) * 100;
+
+            $('#scroll-indicator').width(scrollPercentage + '%');
+        });
+    });
+ 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+    accordionItems.forEach(function (item) {
+        const accordionLink = item.querySelector("a");
+        const content = item.querySelector(".accordion-content");
+
+        accordionLink.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Toggle the "active" class on the accordion item
+            item.classList.toggle("active");
+
+            // Check if the item is now active
+            const isActive = item.classList.contains("active");
+
+            // Toggle the display of the accordion content with animation
+            if (isActive) {
+                content.style.maxHeight = content.scrollHeight + "px"; // Expand with max height
+            } else {
+                content.style.maxHeight = null; // Collapse by removing max height
+            }
+        });
+    });
+});
+
+
+// JavaScript code to dynamically update the copyright year
+var currentYear = new Date().getFullYear();
+        document.getElementById('copyrightYear').textContent = currentYear;
+
+
+
+	</script>
+
+	<!-- for bootstrap components -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+
+</body>
+</html>
